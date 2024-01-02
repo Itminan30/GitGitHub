@@ -1,0 +1,47 @@
+git config --list --> List the configuration list of git which were selected when git was installed in the system.
+git init --> initialize git in a directory
+git status --> show the status of the directory 
+git add filename --> (staging command) start tracking (stage a file) the file specified in the directory
+git add --all --> start tracking all files and folders in the directory
+git add . --> same as the previous command
+git commit -m "Message" --> this command commits the staged files & folders to the local repository. This is like a version or milestone of the tracked files. Here -m stands for message
+git log --> show the commit log
+git log --oneline --> show the commit log in one line with less info
+git reset --hard commitId --> change the location of the head to the particular commit id (commitId). See commit id by using one line git log. using --hard will go back to the particualr stage
+git reset commitId --> This will revert the head to the particular commit but the changes will persist. using --hard will also revert the changes
+git reflog --> show all the commit log (also the deleted ones by using reset). useful to undo the changes caused by git reset --hard
+git rm fileName --> delete the file and stop tracking it. After using this command a commit is necessary
+git branch --> show the current branch xx
+git branch --list --> show all the branches in the repository
+git branch branchName --> create a new branch named branchName(Ex. git branch dev/add-heading-text). This new branch will be created from the current branch
+git checkout -b branchName --> create a new local branch and switch to it
+git switch branchName --> switch to another branch
+git checkout branchName --> switch to another branch named branchName
+git merge branchName --> merge the changes from the branchName branch to the current branch (most possibly master branch)
+git branch -d branchName --> this is the command for deleting a branch. If -d is used then git will not delete the branch if it has any uncommited changes. But if -D is used then git will delete the branch regardless of uncommited changes.
+git branch -m newBranchName --> this will modify the name of the current branch name to newBranchName. 
+git merge --abort --> 
+git stash --> stash uncommited works in the current directory. This is useful when someone needs to change branch but the current branch has uncommited changes and commiting is not ideal at that moment.
+git stash list --> show the stash list. Here git stash list have to be used, not git stash --list.
+git stash show -p --> show the changes stored in latest stash 
+git stash show stash@{stashNumber} or git stash show stashID --> show a particular stash changes
+git stash pop --> most probably apply the last stash from the stash list (the stash can be from another branch) in current branch
+git stash apply stashID or git stash apply stash@{stashNumber} --> apply a specific stash
+git stash drop stashID or git stash drop stash@{stashNumber} --> delete a specific stash
+git rm --cached fileName --> remove tracking a file in git even though it has been tracked and commited once
+git diff fileName --> show changes in file before commiting and after tracking
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+(##**##) .gitignore is a file where the list of files and folders are saved which are not suppose to be tracked by git
+(##*##) If a file is commited by mistake which should have been ignored, then simply adding the file in .gitignore will not work in this case. In this case use git rm --cached fileName
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+q --> press q to exit from a stuck state
+pwd --> present working directory
+ls -a --> show all file in a directory (including hidden files)
+mkdir folderName --> create a folder named folderName
+touch fileName --> create a file named fileName
+rm fileName --> delete the file named fileName
+rm -d folderName --> delete the folder named folderName. Here -d stands for directory
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+cd ./Ed/web/ReactAccelerator/ModuleZero/GitGitHub/GitPractice/FirstPractice

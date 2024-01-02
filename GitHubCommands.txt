@@ -1,0 +1,13 @@
+(*) git init --> initialize a local git repository
+(*) git add . --> track or stage all files and folders of the local repository
+(*) git commit -m "commit message" --> commit all the tracked files and folders with a commit message
+(*) git branch -M main --> change the branch name to main. Normally the initial branch name in local system is master.
+(*) git remote add <remote-name> <remote-url> --> connect remote repository to the local repository. Multiple remote repository can be connected with a single local repository
+(*) git push -u <remote-name> <branch-name> --> pushing from a local branch will automatically create a new branch in github. Remote name is typically orgin for the first remote repository. Branch-name is typically main
+(*) git push -u <remote-name> <local-branch-name>:<remote-branch-name> --> more formal version of the above command
+(*) git pull <remote-name> --> sync the local repository's current branch with the remote repository
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+(*) git branch --> see all local branches
+(*) git branch -r --> see all remote branches
+(*) git branch -a --> see all local and remote branches
+
